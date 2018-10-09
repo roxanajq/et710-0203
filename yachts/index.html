@@ -46,7 +46,7 @@
              <ul class="menu simple vertical medium-horizontal">
                <li><a href="#">MOTOR YACHTS</a></li>
                <li><a href="sportfish/index.html">SPORTFISH</a></li>
-               <li><a href="index.html#!/orders">EXPERIENCE</a></li>
+               <li><a href="index.html#!/experience">EXPERIENCE</a></li>
                <li><a href="#">REQUEST</a></li>
                <li><a href="#">OUR STORY</a></li>
                <li><a href="#">FIND A DEALER</a></li>
@@ -158,13 +158,13 @@
                  controller:'CustomersController',
                  templateUrl: 'app/views/customers.html'
                })
-             .when('/orders',
+             .when('/experience',
                {
-                 controller: 'OrdersController',
-                 templateUrl: 'app/views/orders.html'
+                 controller: 'ExperienceController',
+                 templateUrl: 'app/views/experience.html'
                })
            });
-           app.controller('OrdersController', function($scope){
+           app.controller('ExperienceController', function($scope){
              $scope.customerID = 5;
            });
            app.controller('CustomersController', function($scope) {
