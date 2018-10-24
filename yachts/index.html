@@ -164,10 +164,21 @@
                  controller: 'ExperienceController',
                  templateUrl: 'app/views/experience.html'
                })
+
+               .when('/request',
+                 {
+                   controller: 'RequestController',
+                   templateUrl: 'app/views/request.html'
+                 })
            });
            app.controller('ExperienceController', function($scope){
              $scope.customerID = 5;
            });
+
+           app.controller('RequestController', function($scope){
+             $scope.customerID = 5;
+           });
+
            app.controller('CustomersController', function($scope) {
              $scope.customers = [
                  {"id": 1, "name":"Ted", "total": 5.996},
