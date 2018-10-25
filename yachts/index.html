@@ -183,6 +183,14 @@
                    templateUrl: 'app/views/story.html'
                  })
 
+
+             .when('/adam',
+                {
+                  controller: 'AdamController',
+                  templateUrl: 'app/views/adam.html'
+                })
+
+
            });
            app.controller('ExperienceController', function($scope){
              $scope.customerID = 5;
@@ -197,6 +205,10 @@
            });
 
            app.controller('DealerController', function($scope){
+             $scope.customerID = 5;
+           });
+
+           app.controller('AdamController', function($scope){
              $scope.customerID = 5;
            });
 
