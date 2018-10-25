@@ -48,8 +48,8 @@
                <li><a href="sportfish/index.html">SPORTFISH</a></li>
                <li><a href="index.html#!/experience">EXPERIENCE</a></li>
                <li><a href="index.html#!/request">REQUEST</a></li>
-               <li><a href="#">OUR STORY</a></li>
-               <li><a href="#">FIND A DEALER</a></li>
+               <li><a href="index.html#!/story">OUR STORY</a></li>
+               <li><a href="index.html#!/dealer">FIND A DEALER</a></li>
                <li>
                  <button type="button" class="button hollow topbar-responsive-button">INVENTORY</button>
                </li>
@@ -170,6 +170,19 @@
                    controller: 'RequestController',
                    templateUrl: 'app/views/request.html'
                  })
+
+              .when('/dealer',
+                 {
+                   controller: 'DealerController',
+                   templateUrl: 'app/views/dealer.html'
+                 })
+
+              .when('/story',
+                 {
+                   controller: 'StoryController',
+                   templateUrl: 'app/views/story.html'
+                 })
+
            });
            app.controller('ExperienceController', function($scope){
              $scope.customerID = 5;
@@ -178,6 +191,15 @@
            app.controller('RequestController', function($scope){
              $scope.customerID = 5;
            });
+
+           app.controller('StoryController', function($scope){
+             $scope.customerID = 5;
+           });
+
+           app.controller('DealerController', function($scope){
+             $scope.customerID = 5;
+           });
+
 
            app.controller('CustomersController', function($scope) {
              $scope.customers = [
